@@ -38,6 +38,7 @@ final class Fqsen
     public function __construct($fqsen)
     {
         $matches = array();
+        // Fix for /array.
         $result = preg_match('/^\\\\([\\w_\\\\]*)(?:[:]{2}\\$?([\\w_]+))?(?:\\(\\))?\.?$/', $fqsen, $matches);
 
         if ($result === 0) {
